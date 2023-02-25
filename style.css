@@ -1,0 +1,304 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+* {padding: 0;
+margin: 0;
+border: 0;}
+
+body {
+  box-sizing: border-box;
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#show-menu-responsive {
+ display: flex;
+ flex-direction: row-reverse;
+ width: 100%;
+}
+
+.menu-side {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2%;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo img{
+ width: 100px;
+}
+
+.nav-bar {
+  width: 50%;
+}
+
+.nav-bar img {
+  display:none;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: end;
+}
+
+.main-grid-container{
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas: 
+  "main-image main-image articles"
+  "big-text text1 articles";
+  gap: 2%;
+  
+}
+
+
+.first-image {
+  grid-area: main-image;
+  width: 100%;
+}
+
+.first-image img{ 
+  width: 100%;
+  max-height: 500px;
+  transition-delay: 20ms;
+}
+.main-big-text {
+  font-size: large;
+  flex-wrap: wrap;
+  grid-area: big-text;
+}
+.text {
+  grid-area: text1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 20px;
+}
+
+.dark-text{
+  color: rgb(71, 71, 71) ;
+}
+
+#read-more {
+  background-color: rgb(219, 107, 2);
+  color: white;
+  width: 50%;
+  min-height: 80px;
+  font-size: x-large;
+}
+
+#articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+  grid-area: articles;
+  background-color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
+  padding: 5%;
+}
+
+.main-article-title {
+  color: orange;
+  font-size: 60px;
+}
+.paragraph-article {
+  color: rgb(187, 185, 185);
+}
+ .border-bottom {
+  border-bottom: 1px solid rgba(194, 189, 250, 0.493);
+  padding-bottom: 20px;
+}
+
+.extras {
+  margin-top: 10%;
+  display: flex;
+  gap: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5%;
+}
+
+.number-bottom {
+  font-size: x-large;
+  color: darkgray;
+}
+
+.Title-bottom {
+  color: black;
+  font-weight: 900;
+}
+
+@media (max-width:1700px) {
+
+  body {
+    font-size: medium;
+  }
+
+  .container {
+    padding: 5% 10%;
+  }
+
+  .header {
+    min-height: 70px;
+  }
+
+  #logo img{
+    width: auto;
+   }
+
+  .main-grid-container{
+    min-height: 50%;
+    height: auto;
+    gap: 5%;
+  }
+  
+  .first-image img{ 
+    max-height: 300px;
+  }
+  #read-more {
+    width: 50%;
+    min-height: 40px;
+    font-size: medium;
+  }
+  .main-article-title {
+    font-size: 30px;
+  }
+  .extras {
+    width: 100%;
+  }
+
+  .extras img {
+    width: 10%;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .container {
+    padding: 2%;
+  }
+  .main-grid-container {
+    gap: 1%;
+  }
+
+  .nav-bar {
+    width: 50%;
+    align-self: center;
+  }
+
+  #read-more {
+    height: 60px;
+    font-size: large;
+  }
+
+  .extras {
+    padding-top: 10%;
+    flex-wrap: wrap;
+    flex-grow: 1 0 100%;
+  }
+  .extras img{
+    width: 30%;
+    
+  }
+  .extras .description {
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+  }
+  
+  .number-bottom {
+    font-size: 30px;
+  }
+}
+
+@media (max-width:660px) {
+  body {
+    font-size: small;
+  }
+  #responsive-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+  }
+  
+
+  #responsive-nav-list #close-png{
+    padding: 5px;
+    align-self: flex-end;
+    width: 30px;
+  }
+
+  .show {
+    display: block;
+    min-width: 40%;
+    height: 100vh;
+  }
+
+  .sub-menu-choose {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  aside a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #close-png:hover, #nav-show:hover {
+    width: 45px;
+    cursor: pointer;
+  }
+
+  .header .nav-bar {
+    width: 20% ;
+    transition-delay: 5s;
+  }
+
+  .header .nav-bar ul {
+    display: none;
+  }
+  .header .nav-bar img {
+    display: block;
+  }
+  
+
+  .main-grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    min-height: 200vh;
+  }
+  #articles {
+    min-height: 800px;
+    justify-content: space-evenly;
+    align-self: center;
+  }
+  .extras {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
