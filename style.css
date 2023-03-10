@@ -1,6 +1,3 @@
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
-
 * {padding: 0;
 margin: 0;
 border: 0;}
@@ -13,12 +10,16 @@ body {
 
 #show-menu-responsive {
  display: flex;
- flex-direction: row-reverse;
+ flex-direction: column;
+ align-items: end;
  width: 100%;
+ position: fixed;
+ background-color: rgba(10,23,55,0.5);
 }
 
 .menu-side {
   display: none;
+  background-color: white;
 }
 
 .container {
@@ -45,7 +46,7 @@ body {
 }
 
 .nav-bar img {
-  display:none;
+  display: none;
 }
 
 .nav-bar ul {
@@ -242,6 +243,7 @@ body {
     justify-content: start;
     align-items: start;
     gap: 20px;
+    padding-left: 10px;
   }
   
 
@@ -253,8 +255,9 @@ body {
 
   .show {
     display: block;
-    min-width: 40%;
+    width: 50%;
     height: 100vh;
+    overflow-y: scroll;
   }
 
   .sub-menu-choose {
